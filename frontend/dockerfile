@@ -1,0 +1,9 @@
+# Use Nginx as the base image
+FROM nginx:alpine
+
+# Copy the index.html file and background image to the appropriate location in the container
+COPY index.html /usr/share/nginx/html
+COPY pexels-pixabay-531880.jpg /usr/share/nginx/html
+
+# Expose port 80 to allow external access
+EXPOSE 80
